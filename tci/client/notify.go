@@ -5,6 +5,7 @@ import "log"
 const (
 	tci_1_4 tciVersion = 1.4
 	tci_1_5 tciVersion = 1.5
+	tci_2_0 tciVersion = 2.0
 )
 
 type tciVersion float64
@@ -247,6 +248,8 @@ func (n *notifier) setTCIProtocol(msg Message) {
 
 	n.tciName = name
 	n.tciVersion = tciVersion(version)
+	log.Printf("Detected %s Version %f", n.tciName, n.tciVersion)
+
 }
 
 // MessageListener is notified when any text message is received from the TCI server.
