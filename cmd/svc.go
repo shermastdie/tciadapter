@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ftl/tci/client"
-	"github.com/ftl/tciadapter/adapter"
+	"github.com/shermastdie/tciadapter/adapter"
+	"github.com/shermastdie/tciadapter/tci/client"
 	"github.com/spf13/cobra"
 
 	"golang.org/x/sys/windows/svc"

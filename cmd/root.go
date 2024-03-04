@@ -11,10 +11,10 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/ftl/tci/client"
+	"github.com/shermastdie/tciadapter/tci/client"
 	"github.com/spf13/cobra"
 
-	"github.com/ftl/tciadapter/adapter"
+	"github.com/shermastdie/tciadapter/adapter"
 )
 
 var rootFlags = struct {

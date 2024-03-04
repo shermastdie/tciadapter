@@ -3,7 +3,7 @@ package adapter
 import (
 	"sync"
 
-	tci "github.com/ftl/tci/client"
+	tci "github.com/shermastdie/tciadapter/tci/client"
 )
 
 func newTRXData(trx int) *TRXData {

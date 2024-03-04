@@ -12,7 +12,7 @@ import (
 
 	hamlib "github.com/ftl/rigproxy/pkg/client"
 	"github.com/ftl/rigproxy/pkg/protocol"
-	tci "github.com/ftl/tci/client"
+	tci "github.com/shermastdie/tciadapter/tci/client"
 )
 
 func Listen(localAddress string, tciHost *net.TCPAddr, trx int, done <-chan struct{}, traceHamlib, traceTCI bool, noDigimodes bool, version string) (*Adapter, error) {

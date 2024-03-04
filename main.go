@@ -1,6 +1,6 @@
 package main
 
-import "github.com/ftl/tciadapter/cmd"
+import "github.com/shermastdie/tciadapter/cmd"
 
 var version = "development"
 
