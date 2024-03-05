@@ -35,7 +35,7 @@ type ConnectionListener interface {
 // ConnectionListenerFunc wraps a function with the ConnectionListener interface.
 type ConnectionListenerFunc func(bool)
 
-// Implements the ConnectionListener interface.
+// Connected Implements the ConnectionListener interface.
 func (f ConnectionListenerFunc) Connected(connected bool) {
 	f(connected)
 }
@@ -162,7 +162,10 @@ func (c *Client) connect() error {
 	}
 	u.Port()
 
-	conn, _, err := websocket.DefaultDialer.Dial(u.String(), nil)
+	dialer := websocket.DefaultDialer
+	// to do
+	log.Printf("trying %s", u.String())
+	conn, _, err := dialer.Dial(u.String(), nil)
 	if err != nil {
 		return fmt.Errorf("cannot open websocket connection: %w", err)
 	}

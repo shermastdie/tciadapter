@@ -41,7 +41,8 @@ func Execute(version string) {
 
 func init() {
 	rootFlags.localAddress = rootCmd.PersistentFlags().StringP("local_address", "l", ":4532", "Use this local address to listen for incoming Hamlib connections")
-	rootFlags.tciHost = rootCmd.PersistentFlags().StringP("tci_host", "t", "localhost:40001", "Connect the adapter to this TCI host")
+	//rootFlags.tciHost = rootCmd.PersistentFlags().StringP("tci_host", "t", "localhost:40001", "Connect the adapter to this TCI host")
+	rootFlags.tciHost = rootCmd.PersistentFlags().StringP("tci_host", "t", "192.168.1.54:40001", "Connect the adapter to this TCI host")
 	rootFlags.trx = rootCmd.PersistentFlags().IntP("trx", "x", 0, "Use this TRX of the TCI host")
 	rootFlags.traceHamlib = rootCmd.PersistentFlags().BoolP("trace_hamlib", "", false, "Trace the Hamlib set commands on the console")
 	rootFlags.traceTCI = rootCmd.PersistentFlags().BoolP("trace_tci", "", false, "Trace the TCI communication on the console")
