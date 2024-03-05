@@ -65,6 +65,7 @@ func (n *notifier) textMessage(msg Message) {
 func (n *notifier) handleIncomingMessage(msg Message) {
 	n.emitMessage(msg)
 	var err error
+
 	switch msg.name {
 	case "protocol":
 		n.setTCIProtocol(msg)
